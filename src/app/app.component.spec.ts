@@ -20,7 +20,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Implémentation des tests en FRONT sur la logique métier d'authentification'`, () => {
+  it(`should have as title 'TDD avec Angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('TDD avec Angular');
