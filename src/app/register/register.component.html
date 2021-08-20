@@ -1,1 +1,11 @@
-<p>register works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <input type="text" id="lastname" placeholder="Entrez votre nom"/>
+  <input type="text" id="firstname" placeholder="Entrez votre prénom" />
+  <input type="email" id="email" placeholder="Entrez votre email" />
+  <span *ngIf="submitted && form.controls.email.invalid" id="email-error">Veuillez entrer un email valide.</span>
+  <input type="password" id="password" placeholder="Entrez votre mot de passe" />
+  <input type="password" id="confirm_password" placeholder="Entrez à nouveau  votre mot de passe" />
+  <span *ngIf="submitted && form.controls.password.invalid" id="password-error">Veuillez entrer un mot de passe
+    valide.</span>
+  <button type="submit">Créer un compte</button>
+</form>

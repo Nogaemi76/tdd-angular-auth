@@ -1,1 +1,9 @@
-<p>login works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <input type="email" id="email" placeholder="Entrez votre email" />
+  <span *ngIf="submitted && form.controls.email.invalid" id="email-error">Veuillez entrer un email valide.</span>
+  <input type="password" id="password" placeholder="Entrez votre mot de passe" />
+  <span *ngIf="submitted && form.controls.password.invalid" id="password-error">Veuillez entrer un mot de passe
+    valide.</span>
+  <button type="submit">Se connecter</button>
+</form>
+
