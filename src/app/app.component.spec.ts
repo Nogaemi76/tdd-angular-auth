@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'test-front-auth-angular'`, () => {
+  it(`should have as title 'Implémentation des tests en FRONT sur la logique métier d'authentification'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('test-front-auth-angular');
+    expect(app.title).toEqual('TDD avec Angular');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('test-front-auth-angular app is running!');
+    expect(compiled.querySelector('h1').textContent).toContain('TDD avec Angular');
   });
 });
